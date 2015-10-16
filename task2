@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdint.h>
+
+int main(int argc, char *argv[])
+{
+    uint64_t n, a, b, c, i;
+    printf("Vvedite n\n");
+    scanf("%I64u", &n);
+    b = 1;
+    c = 1;
+    for (i=0; i<n; i++){
+        b = b*27%1000000007;
+        c = c*7%1000000007;
+    }
+    a = (b - c)%1000000007;
+    printf("%I64u", a);
+}
